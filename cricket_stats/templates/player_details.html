@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Player Details</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <td>{{ player['name'] }}</td>
+        </tr>
+        <tr>
+            <th>Jersey Number</th>
+            <td>{{ player['jersey_number'] }}</td>
+        </tr>
+        <tr>
+            <th>Matches Played</th>
+            <td>{{ player['matches_played'] }}</td>
+        </tr>
+        <tr>
+            <th>Wickets Taken</th>
+            <td>{{ player['wickets_taken'] }}</td>
+        </tr>
+        <tr>
+            <th>Runs Scored</th>
+            <td>{{ player['runs_scored'] }}</td>
+        </tr>
+        <tr>
+            <th>Special Skill</th>
+            <td>{{ player['special_skill'] }}</td>
+        </tr>
+    </table>
+    <nav>
+        <a href="{{ url_for('index') }}">Back to Home</a>
+        <a href="{{ url_for('player_list') }}">View All Players</a>
+    </nav>
+</body>
+</html>
